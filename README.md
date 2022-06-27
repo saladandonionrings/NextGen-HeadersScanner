@@ -17,9 +17,9 @@
   	python h_scan -u https://example.com
   
 # Snapshots
-  <img alt="usage_headers" src="https://user-images.githubusercontent.com/61053314/175931381-5ada9e93-4f55-478c-a181-efb2cbd402e9.png" />
+
+  <img alt="usage_headers" src="https://user-images.githubusercontent.com/61053314/175954992-61faa40d-7504-408b-8253-562e467faa7e.png" />
   
 ## Contributors 🛹
 ![GitHub contributors](https://img.shields.io/github/contributors/saladandonionrings/nextgen_spoofer?style=flat-square)
 <p>We are still working on this project with new features</p>
-
