@@ -4,3 +4,4 @@ wappalyzer
 requests
 json
 colored
+webtech
