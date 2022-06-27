@@ -6,7 +6,6 @@ import colored, cprint
 from cprint import *
 import time
 import webtech
-import pandas as pd
 
 
 
