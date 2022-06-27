@@ -2,7 +2,7 @@
   <h1>NextGen Headers Scanner </h1>
 <img alt="Python Version" src="https://img.shields.io/badge/python-%3E%3D3.0-blue?style=for-the-badge" />
   </p>
-🐍 Python HTTP Headers Scanner
+🐍 Python HTTP Headers Scanner | INspired by OWASP Secure Headers Project
 </div>
 
 # ⚙️ SetUp 
