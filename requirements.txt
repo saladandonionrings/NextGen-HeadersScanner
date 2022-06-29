@@ -1,7 +1,0 @@
-termcolor
-pyfiglet
-wappalyzer
-requests
-json
-colored
-webtech
