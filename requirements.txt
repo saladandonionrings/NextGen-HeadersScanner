@@ -1,0 +1,6 @@
+termcolor
+pyfiglet
+requests
+colored
+cprint
+webtech
