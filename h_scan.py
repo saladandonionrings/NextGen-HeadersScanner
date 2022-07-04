@@ -6,6 +6,9 @@ import colored, cprint
 from cprint import *
 import time
 import webtech
+import pandas as pd
+
+
 
 '''
 GLOBAL VARIABLES
@@ -28,6 +31,8 @@ def get_args():
 
 url = get_args()
 
+
+  
 servers=['Apache', 'Nginx', 'IIS', 'Cloudflare', 'lighttpd']
 reco = [
     ["Apache","X-Frame-Options", "https://tecadmin.net/configure-x-frame-options-apache/"],
@@ -83,18 +88,23 @@ headers=resp.headers
 '''
 HEADER
 '''
-print("\033[3;35m")
-header2 = pyfiglet.figlet_format("HTTP Security Header Scanner", font = "future")
+print("\033[1;35m")
+header2 = pyfiglet.figlet_format("Security Headers Scanner", font = "cybermedium")
 print(header2)
 server=headers.get('Server')
 print("\033[1;35m\nWeb Server is :",server)
 
 wt = webtech.WebTech(options={'json': True})
+char=['"','[',']','{','}','version: null','name: ',',']
 
-# scan a single website
 try:
     report = wt.start_from_url(url)
-    print("\033[1;33mIdentified technologies : ", report)
+    d=json.dumps(report, indent=4, sort_keys=True)
+    for i in char:
+        if i in d:
+            d=d.replace(i, '')
+    
+    print("\n\033[1;33mIdentified technologies:\n", d)
 
 except webtech.utils.ConnectionException:
     print("Connection error")
@@ -141,16 +151,16 @@ for i in list:
         print("\nNo Referrer-Policy detected\nImplement it like that :\n Referrer-Policy: no-referrer\n---")
         bad.append(i)
     if i=="X-Permitted-Cross-Domain-Policies":
-        print("\nNo X-Permitted-Cross-Domain-Policies detected\nImplement it like that :\n X-Permitted-Cross-Domain-Policies: none | master-only | by-content-type | by-ftp-filename | all\n")
+        print("\nNo X-Permitted-Cross-Domain-Policies detected\nImplement it like that :\n X-Permitted-Cross-Domain-Policies: none | master-only | by-content-type | by-ftp-filename | all\n---")
         bad.append(i)
     if i=="Clear-Site-Data":
-        print("\nNo Clear-Site-Data detected\nImplement it like that :\n Clear-Site-Data: 'cache','cookies','storage'\n")
+        print("\nNo Clear-Site-Data detected\nImplement it like that :\n Clear-Site-Data: 'cache','cookies','storage'\n---")
         bad.append(i)
     if i=="Cross-Origin-Embedder-Policy":
-        print("\nNo Cross-Origin-Embedder-Policy detected\nImplement it like that :\n Cross-Origin-Embedder-Policy: require-corp\n")
+        print("\nNo Cross-Origin-Embedder-Policy detected\nImplement it like that :\n Cross-Origin-Embedder-Policy: require-corp\n---")
         bad.append(i)
     if i=="Cross-Origin-Ressource-Policy":
-        print("\nNo Cross-Origin-Ressource-Policy detected\nImplement it like that :\n Cross-Origin-Resource-Policy: same-origin\n")
+        print("\nNo Cross-Origin-Ressource-Policy detected\nImplement it like that :\n Cross-Origin-Resource-Policy: same-origin\n---")
         bad.append(i)
 
 for y in obso_h:
