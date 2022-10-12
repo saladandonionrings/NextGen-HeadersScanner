@@ -6,10 +6,8 @@
 </div>
 
 # ⚙️ SetUp 
-
 	apt-get update
-
-	# Prerequisites
+	apt-get install python3.8 python3-pip
 	pip install -r requirements.txt
 
 # Usage
