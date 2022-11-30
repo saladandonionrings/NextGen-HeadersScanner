@@ -16,7 +16,7 @@
   
 # Snapshot
 
-  <img alt="usage_headers" src="https://user-images.githubusercontent.com/61053314/177128109-baee76c9-8e02-43c0-9643-9441ad8255d5.png" />
+  <img alt="usage_headers" src="https://user-images.githubusercontent.com/61053314/204861297-8d95edd8-9bc0-483f-ac90-8bbb102f64f4.png" />
   
 ## Contributors 🛹
 ![GitHub contributors](https://img.shields.io/github/contributors/saladandonionrings/nextgen_spoofer?style=flat-square)
